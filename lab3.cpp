@@ -2,9 +2,6 @@
 // Created by danil on 19.03.2026.
 //
 #include <iostream>
-#include <memory>
-#include <ostream>
-#include <vector>
 #include <unordered_set>
 #include <stdexcept>
 #include <unordered_map>
@@ -203,7 +200,7 @@ int main() {
 
 
     std::cout << "\n--- Тест 7: Копирование ---\n";
-    MyShared<int> s2(s1); // копирование
+    MyShared<int> s2(s1);
     std::cout << "s2 значение: " << *s2 << std::endl;
     std::cout << "s1 значение: " << *s1 << std::endl;
     std::cout << "s1 count(): " << s1.count() << " (должен быть 2)\n";
@@ -287,7 +284,7 @@ int main() {
 
     std::cout << "\n--- Тест 13: Работа с nullptr ---\n";
     MyShared<int> s9(nullptr);
-    std::cout << "s9 count(): " << s9.count() << " (0)\n";
+    std::cout << "s9 count(): " << s9.count() << " (должен быть 0)\n";
 
 
     std::cout << "\n--- Тест 14: Цепочка присваиваний ---\n";
